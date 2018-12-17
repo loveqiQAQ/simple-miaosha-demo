@@ -1,2 +1,29 @@
+###########################################
+#
+#              MyBatis 配置
+#
+###########################################
 mybatis:
+  # 配置 mybatis xml 文件的映射地址
   mapper-locations: classpath:mapping/*.xml
+
+###########################################
+#
+#              Spring 配置
+#
+###########################################
+spring:
+  # 数据源配置
+  datasource:
+    # 连接名称
+    name: miaosha
+    # 连接地址
+    url: jdbc:mysql://127.0.0.1:3306/miaosha
+    # 连接用户名
+    username: root
+    # 连接密码
+    password: 1234
+    # 使用连接池的类型
+    type: com.alibaba.druid.pool.DruidDataSource
+    # 使用数据库的驱动
+    driver-class-name: com.mysql.jdbc.Driver
